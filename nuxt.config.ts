@@ -7,7 +7,7 @@ export default defineNuxtConfig({
         braceStyle: '1tbs'
       }
     }
-  }], '@nuxt/ui', '@vueuse/nuxt', '@nuxt/icon'],
+  }], '@nuxt/ui', '@vueuse/nuxt', '@nuxt/icon', '@nuxt/content'],
   devtools: { enabled: import.meta.dev },
   app: {
     head: {
@@ -15,6 +15,20 @@ export default defineNuxtConfig({
     }
   },
   css: ['~/assets/css/main.css'],
+  content: {
+    build: {
+      markdown: {
+        highlight: {
+          theme: 'github-dark',
+          langs: ['js', 'ts', 'vue', 'css', 'html', 'bash', 'yaml', 'json'],
+        },
+        toc: {
+          depth: 3,
+          searchDepth: 2,
+        },
+      },
+    },
+  },
   compatibilityDate: '2025-07-15',
   vite: {
     server: {
