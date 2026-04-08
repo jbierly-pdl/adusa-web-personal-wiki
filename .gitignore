@@ -1,0 +1,15 @@
+node_modules
+.nuxt
+.output
+.data
+.nitro
+dist
+coverage
+.DS_Store
+
+.env
+.env.*
+!.env.example
+
+_bmad*
+.github/skills/*
